@@ -1,7 +1,7 @@
 import { GoogleGenAI } from "@google/genai";
 import { menuData } from "../data/menu";
 
-const ai = new GoogleGenAI({ apiKey: import.meta.env.VITE_GEMINI_API_KEY });
+const ai = new GoogleGenAI({ apiKey: import.meta.env.VITE_GEMINI_API_KEY as string });
 
 const compactMenu = menuData.items.map((i) => ({
   name: i.name,
